@@ -1,0 +1,78 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'Tutorials/index.css' %}">
+</head>
+<body class="grid">
+    <header class="header">
+        <nav>
+            <ul>
+                <li class="sidebarl-a">
+                    <a href="{% url '' %} ">Wakanda Academy</a>
+                </li>
+                <li>
+                    <a href="#">Programing</a>
+                </li>
+                <li>
+                    <a href="#">languages</a>
+                </li>
+                <li>
+                    <a href="#">medical</a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+    <main class="content">
+        
+        <div class="effect5">
+            {% for t in course %}
+           <!-- <h4>{{t.date}}</h4>
+           <h5>{{t.developer}}</h5> -->
+           <h3>{{t.title}}</h3>
+           <p>{{t.content}}</p>
+           {% endfor %} 
+        </div>
+       
+           
+           
+         
+
+        
+            
+         
+    </main>
+    <aside class="sidebarl">
+        <ul class="sidebarl-a">
+            <li>
+                
+                {% for t in course %}
+                <a href="#">{{t.title}}</a>
+               {% endfor %} 
+               
+            </li>
+           
+        </ul>
+    </aside>
+    <aside class="sidebarr">
+        <ul>
+            <li>
+                <a href="#"></a>
+            </li>
+        </ul>
+    </aside>
+    <footer class="footer">
+        <ul>
+            <li>
+                <a href="#">contact</a>
+            </li>
+        </ul>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+
+  <link rel="stylesheet" href="{% static 'Tutorials/materialize.min.css' %}">
+  <link rel="stylesheet" href="{% static 'Tutorials/index.css' %}">
+  <script src="{% static 'Tutorials/materialize.min.js' %}"></script>
+
+
+</head>
+
+<body>
+
+   
+    <div id="contentBox" class="row">
+        <div id="leftpanel" class="col s12 m6 l3"><p>Left Panel</p></div>
+        <div id="rightpanel" class="col s12 m6 l3"><p>Right Panel</p></div>
+        <div id="mymaincontent"class="col s12 m6 l3">
+          <p>Main content</p>
+        {% for t in tutorials %}
+            <p>{{t.}}</p>
+  
+        {% endfor %}
+        </div>
+        <div id="mydiscusion"class="col s12 m6 l3"><p>Discusion</p></div>
+      </div>
+  
+  
+  
+</body>
+
+</html>
